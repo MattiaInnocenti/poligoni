@@ -1,8 +1,13 @@
 package poligoni;
 
+import ed.utils.Finestra;
+
 public class TestPoligoni {
 
 	public static void main(String[] args) {
+		//inserimento libreria Finestra
+		Finestra finestra = Finestra.getNewFinestra("Poligoni");
+		
 		// collaudo perimetro
 		Punto p1 = new Punto(1, 1);
 		Punto p2 = new Punto(5, 1);
@@ -12,13 +17,13 @@ public class TestPoligoni {
 
 		Poligono triangolo = new Poligono("Triangolo", vertici);
 		// verifica toString
-		System.out.println(triangolo);
+		finestra.print(triangolo.toString());
 
 		// verifica accessor
-		System.out.println(triangolo.getNome());
-		System.out.println(triangolo.getPerimetro());
+		finestra.print(triangolo.getNome());
+		finestra.print(String.valueOf(triangolo.getPerimetro()));
 		for (Punto p : triangolo.getVertici())
-			System.out.println(p.toString());
+			finestra.print(p.toString());
 
 		// test farfalle e poligoni vari
 		// collaudo perimetro
@@ -31,8 +36,8 @@ public class TestPoligoni {
 		
 		Poligono rect = new Poligono("rettangolo", pt);
 		Poligono farf2 = new Poligono("farfalla", pt2);
-		System.out.println(rect);
-		System.out.println(farf2);
+		finestra.print(rect.toString());
+		finestra.print(farf2.toString());
 		
 	}
 

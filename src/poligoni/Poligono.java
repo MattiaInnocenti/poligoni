@@ -1,5 +1,10 @@
 package poligoni;
 
+/**
+ * Classe che descrive l'entità poligono, dotato di nome e costituito da un'insieme di vertici
+ * @author mattia.innocenti3
+ * @version 1.1
+ */
 public class Poligono {
 
 	private Punto[] vertici;
